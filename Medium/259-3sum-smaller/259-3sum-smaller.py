@@ -8,7 +8,7 @@ class Solution:
             sum=0
             while(i<j):
                 if nums[i] + nums[j] < target:
-                    sum+= j-i
+                    sum+= j-i #think of the right pointer coming closer. since its already fulfilled. all the other numbers in between i and will as well
                     i+=1
                 else:
                     j-=1
@@ -17,13 +17,6 @@ class Solution:
         
         sum =0
         for i in range(n):
-            sum += helper(nums, i+1, target-nums[i])
+            sum += helper(nums, i+1, target-nums[i]) 
             
-            
-        
-        
         return sum
-        
-        
-                    
-        return ans
